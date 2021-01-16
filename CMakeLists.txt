@@ -36,6 +36,7 @@ endif()
 
 include("${XMAKE_DEPENDENCIES_DIR}/XMake/XMake.cmake")
 
+string(APPEND CMAKE_CXX_FLAGS " -Wno-c++11-narrowing")
 
 ##########################################################################################
 # Process subdirectories

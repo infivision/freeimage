@@ -486,16 +486,16 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 
 # On MacOS X, by default compile both in 32- and 64-bits
-if (APPLE)
-    if (NOT XMAKE_OSX_ARCHITECTURES)
-        set(XMAKE_OSX_ARCHITECTURES "i386;x86_64" CACHE STRING "" FORCE)
-    endif()
+#if (APPLE)
+    #if (NOT XMAKE_OSX_ARCHITECTURES)
+    #    set(XMAKE_OSX_ARCHITECTURES "i386;x86_64" CACHE STRING "" FORCE)
+    #endif()
 
-    if (NOT "${CMAKE_OSX_ARCHITECTURES}" STREQUAL "${XMAKE_OSX_ARCHITECTURES}")
-        set(CMAKE_OSX_ARCHITECTURES "${XMAKE_OSX_ARCHITECTURES}" CACHE INTERNAL "" FORCE)
-        set(CMAKE_OSX_ARCHITECTURES_DEFAULT "ppc" CACHE INTERNAL "" FORCE)
-    endif()
-endif()
+    #if (NOT "${CMAKE_OSX_ARCHITECTURES}" STREQUAL "${XMAKE_OSX_ARCHITECTURES}")
+    #    set(CMAKE_OSX_ARCHITECTURES "${XMAKE_OSX_ARCHITECTURES}" CACHE INTERNAL "" FORCE)
+    #    set(CMAKE_OSX_ARCHITECTURES_DEFAULT "ppc" CACHE INTERNAL "" FORCE)
+    #endif()
+#endif()
 
 # Use relative paths on Windows, to reduce path size for command-line limits
 if (WIN32)
