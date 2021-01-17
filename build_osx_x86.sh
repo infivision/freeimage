@@ -7,4 +7,4 @@ make
 cd ..
 
 mkdir -p ../infistd/lib/osx/x86/
-cp -v build/lib/libgtest.a ../infistd/lib/osx/x86/
+cp -v ./build/lib/*.a ../infistd/lib/osx/x86/
