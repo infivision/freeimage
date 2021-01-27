@@ -11,4 +11,5 @@ cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR -DCMAKE_FIND_ROOT_PATH=$CMAKE_FIND_ROO
 make
 cd ..
 
-cp -v build/lib/libgtest.a ../infistd/lib/linux/arm
+cp -v ./build/lib/*.a ../infistd/lib/linux/arm/bin
+cp -v ./build/lib/*.a ../infistd/lib/linux/arm/debug
